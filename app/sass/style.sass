@@ -1,0 +1,53 @@
+@import smart-grid
+@import ./fonts/FontAwesome
+
++reset()
+=myflex()
+  display: flex
+  align-items: center
+.top
+  width: 100%
+  height: 50px
+  background-color: #4286f4
+  color: #fff
+  +row-flex
+  .top-inwrapper
+    width: 80%
+    margin: auto
+    +myflex
+    justify-content: space-between
+
+    .city
+    .menu
+      ul
+        +myflex
+        justify-content: center
+        li
+          list-style: none
+          padding: 10px
+header
+  .white
+    color: #575959
+    .white-in-wrapper
+      width: 80%
+      margin: auto
+      +myflex()
+      .block1
+        margin-left: 10%
+        margin-right: 10%
+        +size(5)
+        +myflex
+        .line1
+          width: 100%
+          +myflex()
+          justify-content: space-between
+          .about
+            .text
+              text-decoration: underline
+          .calc
+            .text
+              text-decoration: underline
+      .block2
+        +size(3)
+      .block3
+        +size(4)
