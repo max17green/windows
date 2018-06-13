@@ -166,6 +166,7 @@ header .white {
 }
 
 header .white .white-in-wrapper {
+  padding-top: 50px;
   width: 80%;
   margin: auto;
   display: -webkit-box;
@@ -176,21 +177,15 @@ header .white .white-in-wrapper {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 header .white .white-in-wrapper .block1 {
-  margin-left: 10%;
-  margin-right: 10%;
   width: -webkit-calc(41.66667% - 30px);
   width: calc(41.66667% - 30px);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 header .white .white-in-wrapper .block1 .line1 {
@@ -214,7 +209,54 @@ header .white .white-in-wrapper .block1 .line1 .about .text {
 }
 
 header .white .white-in-wrapper .block1 .line1 .calc .text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-decoration: underline;
+}
+
+header .white .white-in-wrapper .block1 .line1 .calc .text i {
+  color: #4286f4;
+  font-size: 23px;
+  margin-right: 10px;
+}
+
+header .white .white-in-wrapper .block1 .telephones {
+  padding-top: 30px;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+header .white .white-in-wrapper .block1 .telephones i {
+  font-size: 45px;
+  color: #4286f4;
+  margin-right: 15px;
+}
+
+header .white .white-in-wrapper .block1 .telephones .tel1 {
+  margin-right: 15px;
+}
+
+header .white .white-in-wrapper .block1 .telephones .tel1 small {
+  color: #4286f4;
+  border-bottom: 1px dashed #4286f4;
+  font-size: 14px;
+}
+
+header .white .white-in-wrapper .block1 .telephones .tel2 {
+  margin-top: -23px;
 }
 
 header .white .white-in-wrapper .block2 {
@@ -222,7 +264,92 @@ header .white .white-in-wrapper .block2 {
   width: calc(25% - 30px);
 }
 
+header .white .white-in-wrapper .block2 .tel {
+  font-size: 26px;
+  color: #4286f4;
+}
+
 header .white .white-in-wrapper .block3 {
   width: -webkit-calc(33.33333% - 30px);
   width: calc(33.33333% - 30px);
+}
+
+header .bgimg {
+  margin-top: 50px;
+  width: 100%;
+  min-height: 600px;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center top;
+}
+
+header .bgimg .change {
+  background-color: #fff;
+  width: 60%;
+  margin: auto;
+  -webkit-border-radius: 0 0 15px 15px;
+  border-radius: 0 0 15px 15px;
+  min-height: 37px;
+}
+
+header .bgimg .change ul {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+header .bgimg .change ul li {
+  list-style: none;
+  color: #000;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+header .bgimg .discounts {
+  text-align: right;
+  margin-right: 20%;
+  margin-top: 2%;
+}
+
+header .bgimg .discounts .line1 {
+  font-size: 70px;
+  color: #4286f4;
+}
+
+header .bgimg .discounts .line2 {
+  font-size: 30px;
+  color: #f46309;
+}
+
+header .bgimg .discounts .line2 span {
+  font-size: 70px;
+}
+
+header .bgimg .discounts .line3 {
+  font-size: 25px;
+  color: #4286f4;
+}
+
+header .bgimg .discounts .line4 {
+  font-size: 20px;
+  color: #575959;
+}
+
+header .bgimg .discounts .more {
+  margin-top: 20px;
+  background-color: #fff;
+  color: #4286f4;
+  border: 1px solid #4286f4;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 13px 15px;
 }

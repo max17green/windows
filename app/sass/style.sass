@@ -1,5 +1,4 @@
 @import smart-grid
-@import ./fonts/FontAwesome
 
 +reset()
 =myflex()
@@ -29,14 +28,15 @@ header
   .white
     color: #575959
     .white-in-wrapper
+      padding-top: 50px
       width: 80%
       margin: auto
       +myflex()
+      justify-content: space-between
       .block1
-        margin-left: 10%
-        margin-right: 10%
+        
         +size(5)
-        +myflex
+        
         .line1
           width: 100%
           +myflex()
@@ -46,8 +46,83 @@ header
               text-decoration: underline
           .calc
             .text
+              display: flex
+              align-items: center
               text-decoration: underline
+              i
+                color: #4286f4
+                font-size: 23px
+                margin-right: 10px
+        .telephones
+          padding-top: 30px
+          font-size: 20px
+          +myflex()
+          i
+            font-size: 45px
+            color: #4286f4
+            margin-right: 15px
+          .tel1
+            margin-right: 15px
+            small
+              color: #4286f4
+              border-bottom: 1px dashed #4286f4
+              font-size: 14px
+          .tel2
+            margin-top: -23px
       .block2
         +size(3)
+        .tel
+          font-size: 26px
+          color: #4286f4
       .block3
         +size(4)
+  .bgimg
+    margin-top: 50px
+    width: 100%
+    min-height: 600px
+    background-image: url(../img/bg.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center top
+    .change
+      background-color: #fff
+      width: 60%
+      margin: auto
+      border-radius: 0 0 15px 15px
+      min-height: 37px
+      ul
+        padding-left: 20px
+        padding-right: 20px
+        +myflex()
+        li
+          list-style: none
+          color: #000
+          margin-left: 10px
+          margin-right: 10px
+    .discounts
+      text-align: right
+      margin-right: 20%
+      margin-top: 2%
+      .line1
+        font-size: 70px
+        color: #4286f4
+      .line2
+        font-size: 30px
+        color: #f46309
+        span
+          font-size: 70px
+      .line3
+        font-size: 25px
+        color: #4286f4
+      .line4
+        font-size: 20px
+        color: #575959
+      .more
+        margin-top: 20px
+        background-color: #fff
+        color: #4286f4
+        border: 1px solid #4286f4
+        border-radius: 10px
+        padding: 13px 15px
+    
+          
