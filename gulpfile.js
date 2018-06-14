@@ -19,7 +19,7 @@ gulp.task('browser-sync', function() {
         server: {
             baseDir: 'app'
         },
-        notify: false,
+        notify: false
         // open: false,
         // online: false, // Work Offline Without Internet Connection
         // tunnel: true, tunnel: "projectname", // Demonstration page: http://projectname.localtunnel.me
@@ -32,7 +32,6 @@ gulp.task('styles', function() {
         .pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
         .pipe(rename({ suffix: '.min', prefix : '' }))
         .pipe(autoprefixer(['last 15 versions']))
-
         .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
         .pipe(gcmq())
         .pipe(gulp.dest('app/css'))
@@ -41,7 +40,8 @@ gulp.task('styles', function() {
 
 gulp.task('js', function() {
     return gulp.src([
-        //'app/libs/jquery/dist/jquery.min.js',
+        'app/libs/jquery.min.js',
+        'app/libs/slick.min.js',
         //'app/libs/fancybox/dist/jquery.fancybox.js',
         //'app/libs/wow/dist/wow.js',
         //'app/libs/flickity/flickity.pkgd.min.js',
