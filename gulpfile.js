@@ -74,7 +74,7 @@ gulp.task('smartgrid', function() {
     var settings = {
         outputStyle: 'sass', /* less || scss || sass || styl */
         columns: 12, /* number of grid columns */
-        offset: '30px', /* gutter width px || % || rem */
+        offset: '0px', /* gutter width px || % || rem */
         mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
         container: {
             maxWidth: '1200px', /* max-width оn very large screen */

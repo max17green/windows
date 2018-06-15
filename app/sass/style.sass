@@ -1,14 +1,22 @@
-@import smart-grid
+@import smart-grid.sass
 @import ../libs/slick.css
 @import ../libs/slick-theme.css
+
+$col-width-normal: 9
+$col-width-xs: 11
+$col-width-lg: 10
 
 +reset()
 =myflex()
   display: flex
   align-items: center
+body
+  font-family: 'Open Sans', sans-serif
+  //width: 100%
 .top
+  font-size: 16px
   width: 100%
-  height: 50px
+  min-height: 50px
   background-color: #4286f4
   color: #fff
   +row-flex
@@ -17,12 +25,11 @@
     margin: auto
     +myflex
     justify-content: space-between
-
-    .city
     .menu
       ul
         +myflex
         justify-content: center
+        flex-wrap: wrap
         li
           list-style: none
           padding: 10px
@@ -31,19 +38,31 @@ header
     color: #575959
     .white-in-wrapper
       padding-top: 50px
-      width: 80%
+      display: flex
+      align-items: center
+      +size($col-width-normal)
+      +size-lg($col-width-lg)
+      +lg(align-items, flex-start)
+      //+lg()
+      //+xs(align-items, center)
+      +size-xs(11)
       margin: auto
-      +myflex()
+
+      flex-wrap: wrap
       justify-content: space-between
+      +xs(justify-content, center)
       .block1
-        
         +size(5)
-        
+        +size-lg(6)
+        +size-xs(12)
         .line1
           width: 100%
           +myflex()
-          justify-content: space-between
+          flex-wrap: wrap
+          justify-content: flex-start
+          +xs(justify-content, center)
           .about
+            margin-right: 30px
             .text
               text-decoration: underline
           .calc
@@ -59,25 +78,37 @@ header
           padding-top: 30px
           font-size: 20px
           +myflex()
+          flex-wrap: wrap
+          +xs(justify-content, center)
           i
             font-size: 45px
             color: #4286f4
             margin-right: 15px
           .tel1
             margin-right: 15px
+            margin-bottom: 15px
             small
               color: #4286f4
               border-bottom: 1px dashed #4286f4
               font-size: 14px
           .tel2
             margin-top: -23px
+            margin-bottom: 15px
+            +xs(margin-top, 0)
       .block2
         +size(3)
+        +size-lg(5)
+        +size-xs(12)
+        +xs(text-align, center)
+        margin-bottom: 15px
         .tel
           font-size: 26px
           color: #4286f4
       .block3
         +size(4)
+        +size-lg(12)
+        +size-xs(12)
+        +lg(text-align, center)
   .bgimg
     margin-top: 50px
     width: 100%
@@ -96,11 +127,14 @@ header
         padding-left: 20px
         padding-right: 20px
         +myflex()
+        flex-wrap: wrap
         li
           list-style: none
           color: #000
           margin-left: 10px
           margin-right: 10px
+        .slesh
+          +xs(display, none)
     .discounts
       text-align: right
       margin-right: 20%
@@ -129,7 +163,8 @@ header
 main
   .advantages
     color: #575959
-    width: 70%
+    +size($col-width-normal)
+    +size-xs(11)
     margin: 30px auto
     h1
       font-size: 20px
@@ -138,11 +173,14 @@ main
       font-size: 18px
     .items
       margin-top: 40px
-      +myflex()
+      display: flex
+      align-items: flex-start
       justify-content: space-between
       flex-wrap: wrap
       .item
-        width: 48%
+        +size(6)
+        +size-md(10)
+        +size-xs(12)
         +myflex()
         margin-bottom: 15px
         i
@@ -156,76 +194,93 @@ main
     box-shadow: 0 0 30px rgba(0,0,0,0.5)
     .topband
       width: 100%
-      height: 50px
+      min-height: 50px
       margin: 5px 5px
       background-color: #dee2e2
       +myflex()
       nav
-        width: 70%
+        +size($col-width-normal)
+        +size-xs($col-width-xs)
         margin: auto
         ul
           +myflex()
           justify-content: space-between
+          flex-wrap: wrap
           li
             a
               text-decoration: none
   .slider
-    width: 70%
+    +size($col-width-normal)
+    +size-xs($col-width-xs)
     margin: 30px auto
     +myflex()
     i
       font-size: 130px
       color: #c8d1d1
-    //.slick-next
-      //left: 10px
-    //color: #fff
-
     img
       margin: 0 15px
   .thebest
-    width: 70%
+    +size($col-width-normal)
+    +size-xs($col-width-xs)
     margin: 40px auto
     font-size: 18px
     +myflex()
+    flex-wrap: wrap
     .thetext
-
       +size(6)
+      +size-xs(12)
       ul
         li
           color: #575959
           margin-top: 20px
     .images
       +size(6)
+      +size-xs(12)
       +myflex()
       justify-content: space-between
+      flex-wrap: wrap
   .windows-items
     display: flex
+    flex-wrap: wrap
     align-items: flex-start
     justify-content: space-between
-    width: 70%
+    +size(10)
+    +size-lg($col-width-lg)
+    +lg(justify-content, space-between)
+    +xs(justify-content, center)
     margin: auto
     .item
+      +size-xs(12)
+      display: flex
+      flex-direction: column
       img
         margin-top: 20px
+        align-self: center
       .price
+        margin-top: auto
         font-size: 25px
         color: #d15f36
-        b
+        span
+          text-transform: uppercase
   .wrapper-advantages-items
-    width: 60%
+    +size($col-width-normal)
+    +size-lg($col-width-lg)
     margin: auto
     h1
       font-size: 26px
       color: #575959
     .advantages-items
       margin-top: 25px
-      +myflex()
+      display: flex
+      align-items: flex-start
       flex-wrap: wrap
       justify-content: space-between
       .item
         margin-bottom: 40px
         +myflex()
         +size(6)
+        +size-lg(5.5)
+        +size-xs(12)
         .circle
           min-width: 70px
           min-height: 70px
@@ -246,16 +301,20 @@ main
 
   .bigband
     width: 100%
-    height: 50px
+    min-height: 50px
     background-color: #e5e5e5
+    padding: 10px 0
     +myflex()
     margin-bottom: 30px
     .center
-      width: 40%
+      +size(4)
+      +size-xs($col-width-xs)
       margin: auto
       +myflex()
       justify-content: space-between
+      flex-wrap: wrap
       .long
+        margin: 10px 5px
         width: 70px
         height: 30px 
         +myflex()
@@ -274,7 +333,8 @@ main
         background-color: #93c421
       .short
         width: 30px
-        height: 30px 
+        height: 30px
+        margin: 10px 5px
         +myflex()
         justify-content: center
         border-radius: 100%
@@ -292,17 +352,20 @@ main
       .short6
         background-color: #5fb771
   .hrbigband
-    width: 38%
-    margin-top: -55px
-    margin-bottom: 55px
+    +size(3.6)
+    +size-xs($col-width-xs)
+    +xs(display, none)
+    margin-top: -65px
+    margin-bottom: 65px
   .wrap-feedback
     overflow: hidden
     width: 100%
     min-height: 300px
     background: linear-gradient(to bottom left, #0f86c6, #c462ad, #691d99);
-    
+    padding-bottom: 20px
     .feedback
-      width: 60%
+      +size(8)
+      +size-xs($col-width-xs)
       margin: auto
       color: #fff
       .title
@@ -313,9 +376,15 @@ main
       form
         .inputs
           +myflex()
+          flex-wrap: wrap
           justify-content: space-between
           .input-item
+            +size(4)
+            +xl(margin, auto)
+            +size-md(10)
+            +size-xs($col-width-xs)
             input
+              width: 100%
               margin-top: 7px
               border-radius: 5px
               background-color: transparent
@@ -332,7 +401,7 @@ main
           color: #451663
           font-size: 18px
           background-color: #fff
-          padding: 0 30px
+          padding: 20px 30px
           border: none
           border-radius: 15px
           i
@@ -344,11 +413,19 @@ main
         text-align: center
   .quality
     overflow: hidden
-    width: 70%
+    +size($col-width-normal)
+    +size-lg($col-width-lg)
+    +size-xs($col-width-xs)
     margin: 40px auto
-    +myflex()
+    display: flex
+    align-items: flex-start
+    justify-content: space-around
+    flex-wrap: wrap
     .left
       +size(7)
+
+      +size-lg(12)
+      margin-bottom: 15px
       h1
         color: #474743
         font-size: 20px
@@ -356,10 +433,62 @@ main
         margin-top: 18px
         color: #7c7c76
     .box
-      background-color: #d2dddd
-      +size(5)
-      min-height: 
+      background-color: #d5e0da
+      padding: 15px 30px 55px 25px
+      +size(4)
+      +size-lg(8)
+      +size-xs($col-width-xs)
+      .top-part
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        .col
 
+          +size(5)
+          hr
+            margin-left: -25px
+          .name
+            margin-top: 50px
+            //margin-left: 15px
 
-      
+        .photo
+          margin-top: 10px
+          border-radius: 100%
+          background-image: url(../img/mary.jpg)
+          width: 150px
+          min-height: 150px
+          background-size: cover
+          background-repeat: no-repeat
+    .text
+      margin-top: 15px
+  .map
+    width: 100%
+    margin: auto
+footer
+  margin-top: 25px
+  min-height: 70px
+  color: #7c7c76
+  hr
+    color: #7c7c76
+  .bottom
+    margin-left: 5px
+    +myflex()
+    .copy
+      margin-right: 35px
+    button
+      padding: 10px
+      +myflex()
+      border-radius: 5px
+      background: linear-gradient(to top, #d1cdca, #fff)
+      color: #009ae8
+      cursor: pointer
+      i
+        background-color: red
+        margin-right: 10px
+        padding: 0 5px
+        color: #d1f442
+        font-size: 20px
+        font-weight: 900
+        border-radius: 4px
+
 
