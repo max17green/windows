@@ -25,6 +25,10 @@ body
     margin: auto
     +myflex
     justify-content: space-between
+    font-size: 14px
+    .fa-bars
+      display: none
+      +sm(display, block)
     .city
       a
         text-decoration: none
@@ -35,15 +39,24 @@ body
         &:hover
           color: #b0c9f2
     .menu
+      +sm(display, none)
+      +sm(position, absolute)
+      +sm(top, 50px)
+      +sm(right, 50px)
       ul
         +myflex
         justify-content: center
         flex-wrap: wrap
+        +sm(background-color, #4286f4)
+        +sm(width, 150px)
+        transition: 1s display
         li
+          +size-sm(12)
           list-style: none
           padding: 10px
           a
             text-decoration: none
+
             color: #fff
             font-weight: 700
             transition: 0.5s color 
@@ -69,7 +82,7 @@ header
       +xs(justify-content, center)
       .block1
         +size(5)
-        +size-lg(6)
+        +size-lg(5)
         +size-xs(12)
         .line1
           width: 100%
@@ -111,6 +124,7 @@ header
             margin-right: 15px
           .wrap-in-tel1
             font-weight: 700
+            margin-bottom: 25px
             .tel1
               margin-right: 15px
             a
@@ -126,22 +140,28 @@ header
             +md(margin-top, 0)
             font-weight: 700 
       .block2
+        text-align: right
         +size(3)
-        +size-lg(5)
+        +size-lg(3)
+        +size-md(5)
         +size-xs(12)
-        +xs(text-align, center)
+        +md(text-align, center)
         margin-bottom: 15px
         .notime
           font-weight: 700
+          margin-bottom: 20px
         .tel
           font-size: 26px
+          +sm(font-size, 20px)
           font-weight: 900
           color: #4286f4
       .block3
+        text-align: right
         +size(4)
-        +size-lg(12)
+        +size-lg(4)
+        +size-md(2)
         +size-xs(12)
-        text-align: center
+        +xs(text-align, center)
   .bgimg
     margin-top: 50px
     
@@ -320,6 +340,7 @@ main
     .thetext
       +size(6)
       +size-xs(12)
+      margin-bottom: 20px
       h1
         color: #575959
       ul
@@ -340,14 +361,14 @@ main
     +size($col-width-normal+1)
     +size-lg($col-width-lg)
     +lg(justify-content, space-between)
-    +xs(justify-content, center)
+    +sm(justify-content, center)
     margin: auto
     .item
       +size-xs(12)
+      margin: 0 20px 70px 20px
       display: flex
       min-height: 425px
       flex-direction: column
-      margin-bottom: 70px
       img
         margin-top: 20px
         align-self: center
@@ -357,6 +378,8 @@ main
         color: #d15f36
         span
           text-transform: uppercase
+      hr
+        color:  #000//#575959
   .wrapper-advantages-items
     +size($col-width-normal)
     +size-lg($col-width-lg)
@@ -372,7 +395,8 @@ main
       justify-content: space-between
       .item
         margin-bottom: 40px
-        +myflex()
+        display: flex
+        align-items: flex-start
         +size(6)
         +size-lg(5.5)
         +size-xs(12)
@@ -533,9 +557,10 @@ main
           margin-right: auto
           color: #451663
           font-size: 20px
+          +md(font-size, 14px)
           font-weight: 700
           background-color: #fff
-          padding: 20px 30px
+          padding: 5px 30px
           border: none
           border-radius: 15px
           opacity: 0.4
@@ -637,5 +662,48 @@ footer
         font-size: 20px
         font-weight: 900
         border-radius: 4px
-
+.wrap-gift
+  position: relative
+  display: none
+  .gift
+    color: #fff
+    margin: auto
+    position: fixed
+    width: 40%
+    min-height: 300px
+    top: 100px
+    left: 30%
+    background: linear-gradient(to bottom, #1341d8, #a5b4e5)
+    border-radius: 10px
+    +myflex()
+    flex-direction: column
+    justify-content: center
+    .change-gift
+      transition: 1s color
+      display: block
+      font-weight: 700
+      font-size: 35px
+      margin-bottom: 20px
+      &:hover
+        color: #162249
+        cursor: pointer
+    .gifts
+      .item
+        
+        margin-bottom: 15px
+        a
+          +myflex()
+          color: #fff
+          text-decoration: none
+          i
+            font-size: 30px
+            margin-right: 15px
+            transition: 1s color
+            &:hover
+              color: #162249
+              cursor: pointer
+          .descript
+            transition: 1s border-bottom
+            &:hover
+              border-bottom: 1px solid red
 

@@ -83,18 +83,23 @@ $(".feedback form input[name='tel']").mask("+7(999)999-9999");
 $(".feedback form input[name='time']").mask("C 99:99 до 99:99");
 
 var arr = ["bg.jpg","slide42.jpg"];   // имена картинок
-    var path = "../img/"; // каталог, где лежат картинки.
-    var i = 0; // индекс текущего изображения.
+var path = "../img/"; // каталог, где лежат картинки.
+var i = 0; // индекс текущего изображения.
 
-    function next() {
-        
-        i = ++i%arr.length;
-        $(".bgimg .backg").fadeOut(1000, function() {
-            $(".bgimg .backg").css("background-image", "url("+path + arr[i]+")");
-        });
-        
-        $(".bgimg .backg").fadeIn(500);
-        
-    }
+function next() {
+    
+    i = ++i%arr.length;
+    $(".bgimg .backg").fadeOut(1000, function() {
+        $(".bgimg .backg").css("background-image", "url("+path + arr[i]+")");
+    });
+    
+    $(".bgimg .backg").fadeIn(500);
+    
+}
 
-    setInterval(function(){next()},5000);
+setInterval(function(){next()},5000);
+
+$(".fa-bars").on('click', function() {
+    
+    $(".menu").slideToggle();
+});

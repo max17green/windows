@@ -15,7 +15,10 @@
     <div class="top">
         <div class="top-inwrapper">
             <div class="city"><b>Город: </b><a href="#">Самара</a></div>
+            <i class="fa fa-bars"></i>
+            
             <nav class="menu">
+                
                 <ul>
                     <li><a href="#">Акции</a></li>
                     <li><a href="#">Фотогалерея</a></li>
@@ -37,7 +40,7 @@
                 <div class="block1">
                     <div class="line1">
                         <div class="about">
-                            <div class="text"><a href="">О компании</a></div>
+                            <div class="text"><a href="#quality">О компании</a></div>
                         </div>
                         <div class="calc">
                             <div class="text">
@@ -50,7 +53,7 @@
                         <i class="fa fa-phone"></i>
                         <div class="wrap-in-tel1">
                             <div class="tel1">+7 (846) 205-41-50</div>
-                            <a href="#">Заказать обратный звонок</a>
+                            <a href="#wrap-feedback">Заказать обратный звонок</a>
                         </div>
                         <div class="tel2">+7 (846) 205-41-51</div>
                     </div>
@@ -173,24 +176,24 @@
                 <img src="img/window182.jpg" alt="">
                 <div class="price"><b>7 203 <span>ք</span>/окно </b></div>
                 <hr>
-                <div class="bottomtext">Цена "под ключ"</div>
-                <div class="fullprice">13 258 <b></b></div>
+                <div class="bottomtext">Цена «под ключ»</div>
+                <div class="fullprice">13 258 <b>Ք</b></div>
             </div>
             <div class="item">
                 <div class="title"><b>Трехстворчатое окно (2.45 м<span>2</span>)</b></div>
                 <img src="img/window245.jpg" alt="">
                 <div class="price"><b>9 231 <span>ք</span>/окно</b></div>
                 <hr>
-                <div class="bottomtext">Цена "под ключ"</div>
-                <div class="fullprice">16 579 <b></b></div>
+                <div class="bottomtext">Цена «под ключ»</div>
+                <div class="fullprice">16 579 <b>Ք</b></div>
             </div>
             <div class="item">
                 <div class="title"><b>Балконный блок (2.695 м<span>2</span>)</b></div>
                 <img src="img/window269.jpg" alt="">
                 <div class="price"><b>10 256 <span>ք</span>/окно</b></div>
                 <hr>
-                <div class="bottomtext">Цена "под ключ"</div>
-                <div class="fullprice">18 846 <b></b></div>
+                <div class="bottomtext">Цена «под ключ»</div>
+                <div class="fullprice">18 846 <b>Ք</b></div>
             </div>
         </div>
         <div class="wrapper-advantages-items">
@@ -276,7 +279,7 @@
             </div>
         </div>
         <hr class="hrbigband">
-        <div class="wrap-feedback">
+        <div class="wrap-feedback" id="wrap-feedback">
             <div class="feedback">
                 <div class="title">Оформите заявку на бесплатную консультацию</div>
                 <form action="">
@@ -288,15 +291,43 @@
                         <div class="input-item">
                             <label for="">Время звонка</label><br><input type="text" value="С__до__" name="time"></div>
                     </div>
-                    <button class="send" disabled>
+                    <button class="send" disabled onClick="$('.wrap-gift').slideToggle();return false;">
                         <div>Оформить и получить гарантированный подарок к Вашему заказу</div>
                         <i class="fa fa-gift"></i>
                     </button>
                 </form>
-                <div class="little-text">Нажимая кнопку "Оформить" вы принимаете условия политики конфиденциальности в отношении обработки персональных данных</div>
+                <div class="little-text">Нажимая кнопку «Оформить» вы принимаете условия политики конфиденциальности в отношении обработки персональных данных</div>
             </div>
         </div>
-        <div class="quality">
+        <div class="wrap-gift">
+            <div class="gift">
+                <div class="change-gift">Выберите ваш подарок</div>
+                <div class="gifts">
+                    <div class="item">
+                        <a href="">
+                        <i class="fa fa-bug"></i>
+                        <div class="descript">Маскитная сетка</div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                        <i class="fa fa-cogs"></i>
+                        <div class="descript">Робот-пылесос</div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                        <i class="fa fa-wrench"></i>
+                        <div class="descript">Отвёртка</div>
+                        </a>
+                    </div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+        </div>
+        <div class="quality" id="quality">
             <div class="left">
                 <h1><b>Качественные окна по доступной цене</b></h1>
                 <p>Нашими специалистами разрабатываются любые пластиковые окна с учётом всех пожеланий заказчика и особенностей помещения,  в котором будут производиться работы;</p>
@@ -309,7 +340,7 @@
                     <div class="col">
                         <div class="title"><b>Нас рекомендуют</b></div>
                         <hr>
-                        <div class="name"><b>Мария Швецова, директор<br> ООО "Тандем и Ко"</b></div>
+                        <div class="name"><b>Мария Швецова, директор<br> ООО «Тандем и Ко»</b></div>
                     </div>
                     <div class="photo"></div>
                 </div>
