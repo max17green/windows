@@ -45,6 +45,8 @@ gulp.task('js', function() {
         //'app/libs/fancybox/dist/jquery.fancybox.js',
         //'app/libs/wow/dist/wow.js',
         //'app/libs/flickity/flickity.pkgd.min.js',
+        'app/libs/jquery.validate.min.js',
+        'app/libs/jquery.maskedinput.min.js',
         'app/js/common.js' // Always at the end
     ])
         .pipe(concat('scripts.min.js'))
@@ -58,7 +60,7 @@ gulp.task('rsync', function() {
         .pipe(rsync({
             root: 'app/',
             hostname: 'p252776@p252776.ftp.ihc.ru',
-            destination: 'www/privolye.rusart-media.ru',
+            destination: 'www/',
             // include: ['*.htaccess'], // Includes files to deploy
             exclude: ['**/Thumbs.db', '**/*.DS_Store'], // Excludes files from deploy
             recursive: true,

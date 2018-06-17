@@ -26,6 +26,8 @@
   },
   "dependencies": {
     "animate": "^1.0.0",
+    "bower": "^1.8.4",
+    "jquery-validation": "^1.17.0",
     "smart-grid": "^2.0.1"
   }
 }

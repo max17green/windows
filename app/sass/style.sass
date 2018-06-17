@@ -2,7 +2,7 @@
 @import ../libs/slick.css
 @import ../libs/slick-theme.css
 
-$col-width-normal: 9
+$col-width-normal: 8
 $col-width-xs: 11
 $col-width-lg: 10
 
@@ -11,8 +11,8 @@ $col-width-lg: 10
   display: flex
   align-items: center
 body
-  font-family: 'Open Sans', sans-serif
-  //width: 100%
+  //font-family: 'Open Sans', sans-serif
+  font-family: 'Roboto', sans-serif
 .top
   font-size: 16px
   width: 100%
@@ -21,10 +21,19 @@ body
   color: #fff
   +row-flex
   .top-inwrapper
-    width: 80%
+    +size($col-width-normal)
     margin: auto
     +myflex
     justify-content: space-between
+    .city
+      a
+        text-decoration: none
+        color: #fff
+        border-bottom: 1px solid #875919
+        font-weight: 700
+        transition: 0.5s color 
+        &:hover
+          color: #b0c9f2
     .menu
       ul
         +myflex
@@ -33,6 +42,13 @@ body
         li
           list-style: none
           padding: 10px
+          a
+            text-decoration: none
+            color: #fff
+            font-weight: 700
+            transition: 0.5s color 
+            &:hover
+              color: #b0c9f2
 header
   .white
     color: #575959
@@ -63,13 +79,22 @@ header
           +xs(justify-content, center)
           .about
             margin-right: 30px
+
             .text
-              text-decoration: underline
+              a
+                font-weight: 700
+                color: #575959
+                &:hover
+                  text-decoration: none
           .calc
             .text
               display: flex
               align-items: center
-              text-decoration: underline
+              a
+                color: #575959
+                font-weight: 700
+                &:hover
+                  text-decoration: none
               i
                 color: #4286f4
                 font-size: 23px
@@ -84,82 +109,113 @@ header
             font-size: 45px
             color: #4286f4
             margin-right: 15px
-          .tel1
-            margin-right: 15px
-            margin-bottom: 15px
-            small
+          .wrap-in-tel1
+            font-weight: 700
+            .tel1
+              margin-right: 15px
+            a
               color: #4286f4
+              text-decoration: none
               border-bottom: 1px dashed #4286f4
               font-size: 14px
+              &:hover
+                border: none
           .tel2
-            margin-top: -23px
-            margin-bottom: 15px
-            +xs(margin-top, 0)
+            margin-top: -8px
+            margin-bottom: 8px
+            +md(margin-top, 0)
+            font-weight: 700 
       .block2
         +size(3)
         +size-lg(5)
         +size-xs(12)
         +xs(text-align, center)
         margin-bottom: 15px
+        .notime
+          font-weight: 700
         .tel
           font-size: 26px
+          font-weight: 900
           color: #4286f4
       .block3
         +size(4)
         +size-lg(12)
         +size-xs(12)
-        +lg(text-align, center)
+        text-align: center
   .bgimg
     margin-top: 50px
-    width: 100%
-    min-height: 600px
-    background-image: url(../img/bg.jpg)
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: center top
-    .change
-      background-color: #fff
-      width: 60%
-      margin: auto
-      border-radius: 0 0 15px 15px
-      min-height: 37px
-      ul
-        padding-left: 20px
-        padding-right: 20px
-        +myflex()
-        flex-wrap: wrap
-        li
-          list-style: none
-          color: #000
-          margin-left: 10px
-          margin-right: 10px
-        .slesh
-          +xs(display, none)
-    .discounts
-      text-align: right
-      margin-right: 20%
-      margin-top: 2%
-      .line1
-        font-size: 70px
-        color: #4286f4
-      .line2
-        font-size: 30px
-        color: #f46309
-        span
-          font-size: 70px
-      .line3
-        font-size: 25px
-        color: #4286f4
-      .line4
-        font-size: 20px
-        color: #575959
-      .more
-        margin-top: 20px
+    
+    .backg
+      width: 100%
+      min-height: 600px
+      background-image: url(../img/bg.jpg)
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center top
+      .change
         background-color: #fff
-        color: #4286f4
-        border: 1px solid #4286f4
-        border-radius: 10px
-        padding: 13px 15px
+        width: 60%
+        margin: auto
+        border-radius: 0 0 15px 15px
+        min-height: 37px
+        padding-bottom: 15px
+        ul
+          padding-left: 20px
+          padding-right: 20px
+          +myflex()
+          flex-wrap: wrap
+          li
+            list-style: none
+            margin-left: 10px
+            margin-right: 10px
+            a
+              font-size: 14px
+              text-decoration: none
+              color: #575959
+              font-weight: 700
+              transition: 0.5s color
+              &:hover
+                color: #3b78db
+          .slesh
+            +xs(display, none)
+      .discounts
+        margin-top: 2%
+        text-align: right
+        .wr-in-discounts
+          padding-right: 18%
+          display: inline-block
+          text-align: left
+          //width: 20%
+          .line1
+            font-size: 70px
+            font-weight: 900
+            color: #4286f4
+          .line2
+            font-size: 30px
+            font-weight: 900
+            color: #f46309
+            span
+              font-size: 100px
+              line-height: 0.8
+          .line3
+            font-size: 39px
+            color: #4286f4
+            font-weight: 900
+          .line4
+            font-size: 16px
+            color: #575959
+          .more
+            background-color: #fff
+            color: #4286f4
+            border: 1.5px solid #4286f4
+            border-radius: 8px
+            padding: 13px 15px
+            transition: 1s background-color
+            font-weight: 900
+            display: block
+            margin: 20px auto
+            &:hover
+              background-color: #a0d3e8
 main
   .advantages
     color: #575959
@@ -181,13 +237,33 @@ main
         +size(6)
         +size-md(10)
         +size-xs(12)
-        +myflex()
+        display: flex
+        align-items: flex-start
         margin-bottom: 15px
         i
           font-size: 35px
           color: #4286f4
           margin-right: 15px
+
+        div
+          background-repeat: no-repeat
+          background-position: center center
+          +size(2)
+          min-height: 45px
+        &:nth-child(1)
+          div
+            background-image: url(../img/windows.png)
+        &:nth-child(2)
+          div
+            background-image: url(../img/house.png)
+        &:nth-child(3)
+          div
+            background-image: url(../img/garage.png)
+        &:nth-child(4)
+          div
+            background-image: url(../img/brush.png)
         p
+          +size(10)
   .wrap-slider
     overflow: hidden
     width: 100%
@@ -208,15 +284,29 @@ main
           flex-wrap: wrap
           li
             a
+              font-weight: 700
               text-decoration: none
+              color: #4286f4
+              transition: 1s color
+              &:hover
+                color: #63afce
   .slider
     +size($col-width-normal)
     +size-xs($col-width-xs)
     margin: 30px auto
     +myflex()
+    .slick-list
+      margin: 0 10px
     i
-      font-size: 130px
-      color: #c8d1d1
+      font-size: 120px
+      color: transparent
+      
+    .fa-caret-left
+      background: linear-gradient(to left, #c8d1d1, #e6e8ed)
+      background-clip: text
+    .fa-caret-right
+      background: linear-gradient(to right, #c8d1d1, #e6e8ed)
+      background-clip: text
     img
       margin: 0 15px
   .thebest
@@ -225,16 +315,19 @@ main
     margin: 40px auto
     font-size: 18px
     +myflex()
+    justify-content: space-between
     flex-wrap: wrap
     .thetext
       +size(6)
       +size-xs(12)
+      h1
+        color: #575959
       ul
         li
           color: #575959
           margin-top: 20px
     .images
-      +size(6)
+      +size(5)
       +size-xs(12)
       +myflex()
       justify-content: space-between
@@ -244,7 +337,7 @@ main
     flex-wrap: wrap
     align-items: flex-start
     justify-content: space-between
-    +size(10)
+    +size($col-width-normal+1)
     +size-lg($col-width-lg)
     +lg(justify-content, space-between)
     +xs(justify-content, center)
@@ -252,7 +345,9 @@ main
     .item
       +size-xs(12)
       display: flex
+      min-height: 425px
       flex-direction: column
+      margin-bottom: 70px
       img
         margin-top: 20px
         align-self: center
@@ -265,7 +360,7 @@ main
   .wrapper-advantages-items
     +size($col-width-normal)
     +size-lg($col-width-lg)
-    margin: auto
+    margin: 0 auto
     h1
       font-size: 26px
       color: #575959
@@ -286,18 +381,52 @@ main
           min-height: 70px
           margin-right: 15px
 
-          border: 1px solid #575959
+          border: 1.5px solid #bbc2cc
           border-radius: 100%
           +myflex()
           justify-content: center
           i
             font-size: 45px
             color: #575959
+          div
+            background-repeat: no-repeat
+            background-position: center center
+            width: 70%
+            min-height: 35px
+
+        &:nth-child(1)
+          .circle
+            div
+              background-image: url(../img/fist.png)
+        &:nth-child(2)
+          .circle
+            div
+              background-image: url(../img/range.png)
+        &:nth-child(3)
+          .circle
+            div
+              background-image: url(../img/service.png)
+        &:nth-child(4)
+          .circle
+            div
+              background-image: url(../img/suitcase.png)
+        &:nth-child(5)
+          .circle
+            div
+              background-image: url(../img/man.png)
+        &:nth-child(6)
+          .circle
+            div
+              background-image: url(../img/magnifier.png)
+              
+            
         .text
+
           .title
-            color: #474743
+            color: #575959
+            font-weight: 700
           .maintext
-            color: #7c7c76
+            color: #575959
 
   .bigband
     width: 100%
@@ -372,6 +501,7 @@ main
         text-align: center
         margin-top: 35px
         font-size: 35px
+        font-weight: 900
         margin-bottom: 30px
       form
         .inputs
@@ -379,10 +509,13 @@ main
           flex-wrap: wrap
           justify-content: space-between
           .input-item
-            +size(4)
+            +size(3)
             +xl(margin, auto)
             +size-md(10)
             +size-xs($col-width-xs)
+            label
+              font-weight: 700
+              font-size: 20px
             input
               width: 100%
               margin-top: 7px
@@ -399,11 +532,16 @@ main
           margin-left: auto
           margin-right: auto
           color: #451663
-          font-size: 18px
+          font-size: 20px
+          font-weight: 700
           background-color: #fff
           padding: 20px 30px
           border: none
           border-radius: 15px
+          opacity: 0.4
+          transition: 2s opacity, 0.5s background-color
+          &:hover
+            background-color: #b8d2fc
           i
             margin-left: 30px
             color: #84bc29
@@ -411,6 +549,7 @@ main
       .little-text
         margin-top: 15px
         text-align: center
+        font-size: 14px
   .quality
     overflow: hidden
     +size($col-width-normal)
@@ -427,7 +566,8 @@ main
       +size-lg(12)
       margin-bottom: 15px
       h1
-        color: #474743
+        color: #575959
+
         font-size: 20px
       p
         margin-top: 18px
@@ -439,18 +579,16 @@ main
       +size-lg(8)
       +size-xs($col-width-xs)
       .top-part
+        color: #575959
         display: flex
         align-items: flex-start
         justify-content: space-between
         .col
-
-          +size(5)
+          +size(6)
           hr
             margin-left: -25px
           .name
             margin-top: 50px
-            //margin-left: 15px
-
         .photo
           margin-top: 10px
           border-radius: 100%
@@ -461,6 +599,7 @@ main
           background-repeat: no-repeat
     .text
       margin-top: 15px
+      color: #575959
   .map
     width: 100%
     margin: auto
@@ -475,13 +614,21 @@ footer
     +myflex()
     .copy
       margin-right: 35px
-    button
+    a
       padding: 10px
       +myflex()
       border-radius: 5px
       background: linear-gradient(to top, #d1cdca, #fff)
       color: #009ae8
+      text-decoration: none
       cursor: pointer
+      border-bottom: 1px solid #a1a5ad
+      border-left: 1px solid #a1a5ad
+      border-top: 1px solid #d7dbe2
+      border-right: 1px solid #d7dbe2
+      transition: 1s background-color
+      &:hover
+        background: linear-gradient(to top, #a0d3e8, #fff)
       i
         background-color: red
         margin-right: 10px
