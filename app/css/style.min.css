@@ -442,6 +442,10 @@ body {
   color: #b0c9f2;
 }
 
+.top .top-inwrapper .menu {
+  z-index: 1;
+}
+
 .top .top-inwrapper .menu ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1805,7 +1809,7 @@ footer .bottom a i {
   }
 
   .top .top-inwrapper .menu {
-    right: 50px;
+    right: 115px;
   }
 
   .top .top-inwrapper .menu ul {
@@ -1834,6 +1838,10 @@ footer .bottom a i {
 }
 
 @media screen and (max-width:560px) {
+  .top .top-inwrapper .menu {
+    right: 55px;
+  }
+
   header .white .white-in-wrapper {
     width: -webkit-calc(91.66667% - 0px);
     width: calc(91.66667% - 0px);
