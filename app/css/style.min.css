@@ -1618,6 +1618,14 @@ footer .bottom a i {
   justify-content: center;
 }
 
+.wrap-gift .gift .fa-times {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .wrap-gift .gift .change-gift {
   -webkit-transition: 1s color;
   -o-transition: 1s color;

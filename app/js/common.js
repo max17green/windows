@@ -103,3 +103,7 @@ $(".fa-bars").on('click', function() {
     
     $(".menu").slideToggle();
 });
+
+$('.fa-times').click(function() {
+    $('.wrap-gift').css('display','none');
+});
