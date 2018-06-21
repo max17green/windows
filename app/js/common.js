@@ -42,7 +42,7 @@ $(".feedback form").validate({
             maxlength: 15
         },
         time: {
-            required: true,
+            required: false,
             minlength: 16,
             maxlength: 16
         }
@@ -89,11 +89,11 @@ var i = 0; // индекс текущего изображения.
 function next() {
     
     i = ++i%arr.length;
-    $(".bgimg .backg").fadeOut(1000, function() {
-        $(".bgimg .backg").css("background-image", "url("+path + arr[i]+")");
+    $(".bgimg").fadeOut(1000, function() {
+        $(".bgimg").css("background-image", "url("+path + arr[i]+")");
     });
     
-    $(".bgimg .backg").fadeIn(500);
+    $(".bgimg").fadeIn(500);
     
 }
 

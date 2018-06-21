@@ -1,10 +1,15 @@
+$col-width-normal: 8.5
+$col-width-xs: 11
+$col-width-lg: 10
+
 @import smart-grid.sass
 @import ../libs/slick.css
 @import ../libs/slick-theme.css
 
-$col-width-normal: 8
-$col-width-xs: 11
-$col-width-lg: 10
+a
+  font-size: 16px
+  +xl(font-size, 14px)
+
 
 +reset()
 =myflex()
@@ -14,7 +19,7 @@ body
   //font-family: 'Open Sans', sans-serif
   font-family: 'Roboto', sans-serif
 .top
-  font-size: 16px
+  
   width: 100%
   min-height: 50px
   background-color: #4286f4
@@ -30,6 +35,8 @@ body
       display: none
       +sm(display, block)
     .city
+      font-size: 16px
+      +xl(font-size, 12px)
       a
         text-decoration: none
         color: #fff
@@ -42,9 +49,9 @@ body
       +sm(display, none)
       +sm(position, absolute)
       +sm(top, 50px)
-      +sm(right, 115px)
-      +xs(right, 55px)
-      z-index: 1
+      +sm(right, 13%)
+      //+xs(right, 13.2%)
+      z-index: 2
       ul
         +myflex
         justify-content: center
@@ -55,10 +62,11 @@ body
         li
           +size-sm(12)
           list-style: none
-          padding: 10px
+          padding: 5px
           a
             text-decoration: none
-
+            font-size: 16px
+            +xl(font-size, 12px)
             color: #fff
             font-weight: 700
             transition: 0.5s color 
@@ -74,8 +82,6 @@ header
       +size($col-width-normal)
       +size-lg($col-width-lg)
       +lg(align-items, flex-start)
-      //+lg()
-      //+xs(align-items, center)
       +size-xs(11)
       margin: auto
 
@@ -94,14 +100,16 @@ header
           +xs(justify-content, center)
           .about
             margin-right: 30px
-
+            
             .text
               a
                 font-weight: 700
                 color: #575959
+                
                 &:hover
                   text-decoration: none
           .calc
+            margin-top: 15px
             .text
               display: flex
               align-items: center
@@ -116,7 +124,7 @@ header
                 margin-right: 10px
         .telephones
           padding-top: 30px
-          font-size: 20px
+          font-size: 16px
           +myflex()
           flex-wrap: wrap
           +xs(justify-content, center)
@@ -134,11 +142,13 @@ header
               text-decoration: none
               border-bottom: 1px dashed #4286f4
               font-size: 14px
+              +xl(font-size, 10px)
               &:hover
                 border: none
           .tel2
             margin-top: -8px
             margin-bottom: 8px
+            margin-left: 20px
             +md(margin-top, 0)
             font-weight: 700 
       .block2
@@ -151,9 +161,12 @@ header
         margin-bottom: 15px
         .notime
           font-weight: 700
+          font-size: 14px
+          text-align: left
           margin-bottom: 20px
         .tel
-          font-size: 26px
+          text-align: left
+          font-size: 22px
           +sm(font-size, 20px)
           font-weight: 900
           color: #4286f4
@@ -166,78 +179,86 @@ header
         +xs(text-align, center)
   .bgimg
     margin-top: 50px
-    
-    .backg
-      width: 100%
-      min-height: 600px
-      background-image: url(../img/bg.jpg)
-      background-repeat: no-repeat
-      background-size: cover
-      background-position: center top
-      .change
-        background-color: #fff
-        width: 60%
-        margin: auto
-        border-radius: 0 0 15px 15px
-        min-height: 37px
-        padding-bottom: 15px
-        ul
-          padding-left: 20px
-          padding-right: 20px
-          +myflex()
-          flex-wrap: wrap
-          li
-            list-style: none
-            margin-left: 10px
-            margin-right: 10px
-            a
-              font-size: 14px
-              text-decoration: none
-              color: #575959
-              font-weight: 700
-              transition: 0.5s color
-              &:hover
-                color: #3b78db
-          .slesh
-            +xs(display, none)
-      .discounts
-        margin-top: 2%
-        text-align: right
-        .wr-in-discounts
-          padding-right: 18%
-          display: inline-block
-          text-align: left
-          //width: 20%
-          .line1
-            font-size: 70px
-            font-weight: 900
-            color: #4286f4
-          .line2
-            font-size: 30px
-            font-weight: 900
-            color: #f46309
-            span
-              font-size: 100px
-              line-height: 0.8
-          .line3
-            font-size: 39px
-            color: #4286f4
-            font-weight: 900
-          .line4
-            font-size: 16px
+    min-height: 600px
+    background-image: url(../img/bg.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center top
+    z-index: 0
+  .backg
+    position: relative
+    margin-top: -600px
+    margin-bottom: 230px
+    +xs(margin-bottom, 230px)
+    +xxs(margin-bottom, 200px)
+    +i5(margin-bottom, 110px)
+    z-index: 1
+    width: 100%
+    .change
+      background-color: #fff
+      width: 66%
+      margin: auto
+      border-radius: 0 0 15px 15px
+      min-height: 25px
+      padding-bottom: 15px
+      ul
+        padding-left: 20px
+        padding-right: 20px
+        +myflex()
+        justify-content: center
+        flex-wrap: wrap
+        li
+          list-style: none
+          margin-left: 10px
+          margin-right: 10px
+          a
+            font-size: 13px
+            text-decoration: none
             color: #575959
-          .more
-            background-color: #fff
-            color: #4286f4
-            border: 1.5px solid #4286f4
-            border-radius: 8px
-            padding: 13px 15px
-            transition: 1s background-color
-            font-weight: 900
-            display: block
-            margin: 20px auto
+            font-weight: 700
+            transition: 0.5s color
             &:hover
-              background-color: #a0d3e8
+              color: #3b78db
+      .slesh
+        +xs(display, none)
+    .discounts
+      margin-top: 2%
+      text-align: right
+      .wr-in-discounts
+        padding-right: 18%
+        display: inline-block
+        text-align: left
+        //width: 20%
+        .line1
+          font-size: 70px
+          font-weight: 900
+          color: #4286f4
+        .line2
+          font-size: 30px
+          font-weight: 900
+          color: #f46309
+          span
+            font-size: 100px
+            line-height: 0.8
+        .line3
+          font-size: 39px
+          color: #4286f4
+          font-weight: 900
+        .line4
+          font-size: 16px
+          color: #575959
+        .more
+          background-color: #fff
+          color: #4286f4
+          border: 1.5px solid #4286f4
+          border-radius: 8px
+          padding: 13px 15px
+          transition: 1s background-color
+          font-weight: 900
+          display: block
+          margin: 20px auto
+          &:hover
+            background-color: #a0d3e8
 main
   .advantages
     color: #575959
@@ -257,7 +278,7 @@ main
       flex-wrap: wrap
       .item
         +size(6)
-        +size-md(10)
+        +size-lg(10) 
         +size-xs(12)
         display: flex
         align-items: flex-start
@@ -305,6 +326,8 @@ main
           justify-content: space-between
           flex-wrap: wrap
           li
+            +xl(margin-left, 2px)
+            +xl(margin-right, 2px)
             a
               font-weight: 700
               text-decoration: none
@@ -351,31 +374,41 @@ main
           margin-top: 20px
     .images
       +size(5)
+      +lg(flex-direction, column)
       +size-xs(12)
       +myflex()
       justify-content: space-between
       flex-wrap: wrap
+      a
+        +lg(margin-bottom, 25px)
   .windows-items
     display: flex
     flex-wrap: wrap
     align-items: flex-start
     justify-content: space-between
-    +size($col-width-normal+1)
+    +size($col-width-normal+1.5)
     +size-lg($col-width-lg)
     +lg(justify-content, space-between)
     +sm(justify-content, center)
     margin: auto
+    +lg(margin-bottom, 30px)
     .item
-      +size-xs(12)
       margin: 0 20px 70px 20px
       display: flex
       min-height: 425px
+      +size-lg($col-width-lg)
+      +lg(text-align, center)
+      +size-xs(12)
+      +lg(min-height, 380px)
+      +xs(min-height, 360px)
+      +lg(margin-bottom, 0)
       flex-direction: column
       img
         margin-top: 20px
         align-self: center
       .price
         margin-top: auto
+        +lg(margin-top, 10px)
         font-size: 25px
         color: #d15f36
         span
@@ -387,6 +420,7 @@ main
     +size-lg($col-width-lg)
     margin: 0 auto
     h1
+      +xs(margin-top, 20px)
       font-size: 26px
       color: #575959
     .advantages-items
@@ -462,7 +496,11 @@ main
     +myflex()
     margin-bottom: 30px
     .center
-      +size(4)
+      +size(4.5)
+      +size-xl(5.5)
+      +size-lg(6)
+      +size-md(8)
+      +size-sm(11)
       +size-xs($col-width-xs)
       margin: auto
       +myflex()
@@ -507,7 +545,11 @@ main
       .short6
         background-color: #5fb771
   .hrbigband
-    +size(3.6)
+    +size(4)
+    +size-xl(5)
+    +size-lg(5.5)
+    +size-md(7.5)
+    +size-sm(10)
     +size-xs($col-width-xs)
     +xs(display, none)
     margin-top: -65px
@@ -590,7 +632,7 @@ main
     .left
       +size(7)
 
-      +size-lg(12)
+      +size-md(12)
       margin-bottom: 15px
       h1
         color: #575959
@@ -603,7 +645,7 @@ main
       background-color: #d5e0da
       padding: 15px 30px 55px 25px
       +size(4)
-      +size-lg(8)
+      +size-md(8)
       +size-xs($col-width-xs)
       .top-part
         color: #575959
@@ -714,4 +756,3 @@ footer
             transition: 1s border-bottom
             &:hover
               border-bottom: 1px solid red
-

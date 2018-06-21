@@ -79,18 +79,18 @@ gulp.task('smartgrid', function() {
         offset: '0px', /* gutter width px || % || rem */
         mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
         container: {
-            maxWidth: '1200px', /* max-width оn very large screen */
+            maxWidth: '1250px', /* max-width оn very large screen */
             fields: '30px' /* side fields */
         },
         breakPoints: {
             xl: {
-                width: '1600px'
+                width: '1360px'
             },
             lg: {
-                width: '1440px' /* -> @media (max-width: 1100px) */
+                width: '1100px' /* -> @media (max-width: 1100px) */
             },
             md: {
-                width: '1280px'
+                width: '960px'
             },
             sm: {
                 width: '780px',
@@ -98,6 +98,12 @@ gulp.task('smartgrid', function() {
             },
             xs: {
                 width: '560px'
+            },
+            xxs: {
+                width: '400px'
+            },
+            i5: {
+                width: '330px'
             }
             /*
             We can create any quantity of break points.
