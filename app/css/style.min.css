@@ -429,6 +429,7 @@ body {
 
 .top .top-inwrapper .fa-bars {
   display: none;
+  cursor: pointer;
 }
 
 .top .top-inwrapper .city {
@@ -556,10 +557,6 @@ header .white .white-in-wrapper .block1 .line1 .about .text a:hover {
   text-decoration: none;
 }
 
-header .white .white-in-wrapper .block1 .line1 .calc {
-  margin-top: 15px;
-}
-
 header .white .white-in-wrapper .block1 .line1 .calc .text {
   display: -webkit-box;
   display: -webkit-flex;
@@ -659,6 +656,7 @@ header .white .white-in-wrapper .block2 .tel {
 
 header .white .white-in-wrapper .block3 {
   text-align: right;
+  margin: auto;
   width: -webkit-calc(25% - 0px);
   width: calc(25% - 0px);
 }
@@ -1735,6 +1733,11 @@ footer .bottom a i {
     font-size: 12px;
   }
 
+  header .white .white-in-wrapper .block1 {
+    width: -webkit-calc(45.83333% - 0px);
+    width: calc(45.83333% - 0px);
+  }
+
   header .white .white-in-wrapper .block1 .telephones .wrap-in-tel1 a {
     font-size: 10px;
   }
@@ -1785,19 +1788,9 @@ footer .bottom a i {
     align-items: flex-start;
   }
 
-  header .white .white-in-wrapper .block1 {
-    width: -webkit-calc(41.66667% - 0px);
-    width: calc(41.66667% - 0px);
-  }
-
   header .white .white-in-wrapper .block2 {
     width: -webkit-calc(25% - 0px);
     width: calc(25% - 0px);
-  }
-
-  header .white .white-in-wrapper .block3 {
-    width: -webkit-calc(33.33333% - 0px);
-    width: calc(33.33333% - 0px);
   }
 
   main .advantages .items .item {
@@ -1917,8 +1910,12 @@ footer .bottom a i {
   }
 
   header .white .white-in-wrapper .block3 {
-    width: -webkit-calc(16.66667% - 0px);
-    width: calc(16.66667% - 0px);
+    width: -webkit-calc(66.66667% - 0px);
+    width: calc(66.66667% - 0px);
+  }
+
+  header .white .white-in-wrapper .block3 {
+    text-align: center;
   }
 
   main .bigband .center {
@@ -1968,7 +1965,7 @@ footer .bottom a i {
   }
 
   .top .top-inwrapper .menu ul {
-    background-color: #4286f4;
+    background-color: #6386ce;
   }
 
   .top .top-inwrapper .menu ul {
@@ -1982,6 +1979,18 @@ footer .bottom a i {
 
   header .white .white-in-wrapper .block2 .tel {
     font-size: 20px;
+  }
+
+  header .backg .discounts {
+    text-align: center;
+  }
+
+  header .backg .discounts .wr-in-discounts {
+    padding-right: 0;
+  }
+
+  header .backg .discounts .wr-in-discounts {
+    margin: auto;
   }
 
   main .windows-items {
@@ -2039,13 +2048,17 @@ footer .bottom a i {
     width: calc(100% - 0px);
   }
 
-  header .white .white-in-wrapper .block3 {
-    width: -webkit-calc(100% - 0px);
-    width: calc(100% - 0px);
+  header .white .white-in-wrapper .block2 .notime {
+    text-align: center;
+  }
+
+  header .white .white-in-wrapper .block2 .tel {
+    text-align: center;
   }
 
   header .white .white-in-wrapper .block3 {
-    text-align: center;
+    width: -webkit-calc(100% - 0px);
+    width: calc(100% - 0px);
   }
 
   header .backg {
@@ -2152,6 +2165,6 @@ footer .bottom a i {
 
 @media screen and (max-width:330px) {
   header .backg {
-    margin-bottom: 110px;
+    margin-bottom: 180px;
   }
 }

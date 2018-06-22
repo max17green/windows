@@ -33,6 +33,7 @@ body
     font-size: 14px
     .fa-bars
       display: none
+      cursor: pointer
       +sm(display, block)
     .city
       font-size: 16px
@@ -56,7 +57,7 @@ body
         +myflex
         justify-content: center
         flex-wrap: wrap
-        +sm(background-color, #4286f4)
+        +sm(background-color, #6386ce)
         +sm(width, 150px)
         transition: 1s display
         li
@@ -90,7 +91,7 @@ header
       +xs(justify-content, center)
       .block1
         +size(5)
-        +size-lg(5)
+        +size-xl(5.5)
         +size-xs(12)
         .line1
           width: 100%
@@ -109,7 +110,7 @@ header
                 &:hover
                   text-decoration: none
           .calc
-            margin-top: 15px
+            //margin-top: 15px
             .text
               display: flex
               align-items: center
@@ -164,20 +165,22 @@ header
           font-weight: 700
           font-size: 14px
           text-align: left
+          +xs(text-align, center)
           margin-bottom: 20px
         .tel
           text-align: left
           font-size: 20px
           +sm(font-size, 20px)
+          +xs(text-align, center)
           font-weight: 900
           color: #1d479b//#4286f4
       .block3
         text-align: right
+        margin: auto
         +size(3)
-        +size-lg(4)
-        +size-md(2)
+        +size-md(8)
         +size-xs(12)
-        +xs(text-align, center)
+        +md(text-align, center)
   .bgimg
     margin-top: 50px
     min-height: 600px
@@ -192,7 +195,7 @@ header
     margin-bottom: 230px
     +xs(margin-bottom, 230px)
     +xxs(margin-bottom, 200px)
-    +i5(margin-bottom, 110px)
+    +i5(margin-bottom, 180px)
     z-index: 1
     width: 100%
     .change
@@ -225,11 +228,13 @@ header
     .discounts
       margin-top: 2%
       text-align: right
+      +sm(text-align, center)
       .wr-in-discounts
         padding-right: 18%
+        +sm(padding-right, 0)
+        +sm(margin, auto)
         display: inline-block
         text-align: left
-        //width: 20%
         .line1
           font-size: 70px
           font-weight: 900
