@@ -1400,6 +1400,10 @@ main .wrap-feedback .feedback form .inputs .input-item p input {
   font-size: 18px;
 }
 
+main .wrap-feedback .feedback form .inputs .input-item p label.error {
+  font-size: 16px;
+}
+
 main .wrap-feedback .feedback form .inputs .input-item p input.error {
   border: 1px solid red;
 }
@@ -1626,16 +1630,18 @@ footer .bottom a i {
 .wrap-gift .gift {
   padding: 30px;
   color: #fff;
-  margin: auto;
   position: fixed;
+  z-index: 999;
   width: 40%;
   min-height: 300px;
   top: 100px;
-  left: 30%;
-  background: -webkit-gradient(linear,left top,left bottom,from(#1341d8),to(#a5b4e5));
-  background: -webkit-linear-gradient(top,#1341d8,#a5b4e5);
-  background: -o-linear-gradient(top,#1341d8,#a5b4e5);
-  background: linear-gradient(to bottom,#1341d8,#a5b4e5);
+  left: 28%;
+  background: -webkit-gradient(linear,right top,left bottom,from(#0f86c6),color-stop(#c462ad),to(#691d99));
+  background: -webkit-linear-gradient(top right,#0f86c6,#c462ad,#691d99);
+  background: -o-linear-gradient(top right,#0f86c6,#c462ad,#691d99);
+  background: linear-gradient(to bottom left,#0f86c6,#c462ad,#691d99);
+  -webkit-box-shadow: 0 0 25px pink;
+  box-shadow: 0 0 25px pink;
   -webkit-border-radius: 10px;
   border-radius: 10px;
   display: -webkit-box;
@@ -1893,6 +1899,10 @@ footer .bottom a i {
     width: -webkit-calc(83.33333% - 0px);
     width: calc(83.33333% - 0px);
   }
+
+  .wrap-gift .gift .change-gift {
+    font-size: 25px;
+  }
 }
 
 @media screen and (max-width:960px) {
@@ -2008,6 +2018,10 @@ footer .bottom a i {
   main .hrbigband {
     width: -webkit-calc(83.33333% - 0px);
     width: calc(83.33333% - 0px);
+  }
+
+  .wrap-gift .gift {
+    left: 25.5%;
   }
 }
 
@@ -2160,6 +2174,10 @@ footer .bottom a i {
 @media screen and (max-width:400px) {
   header .backg {
     margin-bottom: 200px;
+  }
+
+  .wrap-gift .gift {
+    left: 22%;
   }
 }
 

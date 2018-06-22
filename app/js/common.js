@@ -105,5 +105,5 @@ $(".fa-bars").on('click', function() {
 });
 
 $('.fa-times').click(function() {
-    $('.wrap-gift').css('display','none');
+    $('.wrap-gift').fadeOut(500);
 });

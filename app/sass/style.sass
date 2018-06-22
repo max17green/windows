@@ -610,6 +610,8 @@ main
                 color: #fff
                 padding: 15px 10px
                 font-size: 18px
+              label.error
+                font-size: 16px
               input.error 
                 border: 1px solid red
         .send
@@ -731,13 +733,17 @@ footer
   .gift
     padding: 30px
     color: #fff
-    margin: auto
+    //margin: auto
     position: fixed
+    z-index: 999
     width: 40%
     min-height: 300px
     top: 100px
-    left: 30%
-    background: linear-gradient(to bottom, #1341d8, #a5b4e5)
+    left: 28%
+    +sm(left, 25.5%)
+    +xxs(left, 22%)
+    background: linear-gradient(to bottom left,#0f86c6,#c462ad,#691d99)
+    box-shadow: 0 0 25px pink
     border-radius: 10px
     +myflex()
     flex-direction: column
@@ -753,6 +759,7 @@ footer
       display: block
       font-weight: 700
       font-size: 35px
+      +lg(font-size, 25px)
       margin-bottom: 20px
       &:hover
         color: #162249
@@ -776,3 +783,4 @@ footer
             transition: 1s border-bottom
             &:hover
               border-bottom: 1px solid red
+
