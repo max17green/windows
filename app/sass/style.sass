@@ -22,7 +22,7 @@ body
   
   width: 100%
   min-height: 50px
-  background-color: #4286f4
+  background-color: #6386ce//#4286f4
   color: #fff
   +row-flex
   .top-inwrapper
@@ -153,6 +153,7 @@ header
             font-weight: 700 
       .block2
         text-align: right
+        margin-left: 30px
         +size(3)
         +size-lg(3)
         +size-md(5)
@@ -166,13 +167,13 @@ header
           margin-bottom: 20px
         .tel
           text-align: left
-          font-size: 22px
+          font-size: 20px
           +sm(font-size, 20px)
           font-weight: 900
-          color: #4286f4
+          color: #1d479b//#4286f4
       .block3
         text-align: right
-        +size(4)
+        +size(3)
         +size-lg(4)
         +size-md(2)
         +size-xs(12)
@@ -187,7 +188,7 @@ header
     z-index: 0
   .backg
     position: relative
-    margin-top: -600px
+    margin-top: -601px
     margin-bottom: 230px
     +xs(margin-bottom, 230px)
     +xxs(margin-bottom, 200px)
@@ -258,7 +259,7 @@ header
           display: block
           margin: 20px auto
           &:hover
-            background-color: #a0d3e8
+            background-color: #eaf2ff//#a0d3e8
 main
   .advantages
     color: #575959
@@ -319,11 +320,13 @@ main
       +myflex()
       nav
         +size($col-width-normal)
+        +size-xl($col-width-normal + 0.3)
         +size-xs($col-width-xs)
         margin: auto
         ul
           +myflex()
           justify-content: space-between
+          +lg(justify-content, center)
           flex-wrap: wrap
           li
             +xl(margin-left, 2px)
@@ -414,7 +417,8 @@ main
         span
           text-transform: uppercase
       hr
-        color:  #000//#575959
+        border-bottom: 1px solid #f9fafc
+        width: 100%
   .wrapper-advantages-items
     +size($col-width-normal)
     +size-lg($col-width-lg)
@@ -434,7 +438,7 @@ main
         display: flex
         align-items: flex-start
         +size(6)
-        +size-lg(5.5)
+        +size-xl(5.5)
         +size-xs(12)
         .circle
           min-width: 70px
@@ -569,30 +573,40 @@ main
         text-align: center
         margin-top: 35px
         font-size: 35px
+        +xl(font-size, 32px)
+        +lg(font-size, 25px)
         font-weight: 900
         margin-bottom: 30px
       form
         .inputs
-          +myflex()
+          display: flex
+          align-items: flex-start
           flex-wrap: wrap
           justify-content: space-between
+          +lg(justify-content, center)
           .input-item
+            
             +size(3)
-            +xl(margin, auto)
-            +size-md(10)
+            //+xl(margin, auto)
+            +size-lg(10)
+            +lg(margin-bottom, 15px)
             +size-xs($col-width-xs)
             label
               font-weight: 700
               font-size: 20px
-            input
+            p
               width: 100%
-              margin-top: 7px
-              border-radius: 5px
-              background-color: transparent
-              border: 1px solid #fff
-              color: #fff
-              padding: 15px 10px
-              font-size: 18px
+              input
+                width: 95%
+                margin-top: 7px
+                border-radius: 5px
+                background-color: transparent
+                border: 1px solid #fff
+                color: #fff
+                padding: 15px 10px
+                font-size: 18px
+              input.error 
+                border: 1px solid red
         .send
           +myflex()
           justify-content: space-between
@@ -627,10 +641,10 @@ main
     margin: 40px auto
     display: flex
     align-items: flex-start
-    justify-content: space-around
+    justify-content: space-between
     flex-wrap: wrap
     .left
-      +size(7)
+      +size(6.5)
 
       +size-md(12)
       margin-bottom: 15px
@@ -710,6 +724,7 @@ footer
   position: relative
   display: none
   .gift
+    padding: 30px
     color: #fff
     margin: auto
     position: fixed

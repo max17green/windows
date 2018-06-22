@@ -395,7 +395,7 @@ body {
 .top {
   width: 100%;
   min-height: 50px;
-  background-color: #4286f4;
+  background-color: #6386ce;
   color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -637,6 +637,7 @@ header .white .white-in-wrapper .block1 .telephones .tel2 {
 
 header .white .white-in-wrapper .block2 {
   text-align: right;
+  margin-left: 30px;
   width: -webkit-calc(25% - 0px);
   width: calc(25% - 0px);
   margin-bottom: 15px;
@@ -651,15 +652,15 @@ header .white .white-in-wrapper .block2 .notime {
 
 header .white .white-in-wrapper .block2 .tel {
   text-align: left;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 900;
-  color: #4286f4;
+  color: #1d479b;
 }
 
 header .white .white-in-wrapper .block3 {
   text-align: right;
-  width: -webkit-calc(33.33333% - 0px);
-  width: calc(33.33333% - 0px);
+  width: -webkit-calc(25% - 0px);
+  width: calc(25% - 0px);
 }
 
 header .bgimg {
@@ -675,7 +676,7 @@ header .bgimg {
 
 header .backg {
   position: relative;
-  margin-top: -600px;
+  margin-top: -601px;
   margin-bottom: 230px;
   z-index: 1;
   width: 100%;
@@ -786,7 +787,7 @@ header .backg .discounts .wr-in-discounts .more {
 }
 
 header .backg .discounts .wr-in-discounts .more:hover {
-  background-color: #a0d3e8;
+  background-color: #eaf2ff;
 }
 
 main .advantages {
@@ -1087,7 +1088,8 @@ main .windows-items .item .price span {
 }
 
 main .windows-items .item hr {
-  color: #000;
+  border-bottom: 1px solid #f9fafc;
+  width: 100%;
 }
 
 main .wrapper-advantages-items {
@@ -1361,10 +1363,10 @@ main .wrap-feedback .feedback form .inputs {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -1384,8 +1386,12 @@ main .wrap-feedback .feedback form .inputs .input-item label {
   font-size: 20px;
 }
 
-main .wrap-feedback .feedback form .inputs .input-item input {
+main .wrap-feedback .feedback form .inputs .input-item p {
   width: 100%;
+}
+
+main .wrap-feedback .feedback form .inputs .input-item p input {
+  width: 95%;
   margin-top: 7px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -1394,6 +1400,10 @@ main .wrap-feedback .feedback form .inputs .input-item input {
   color: #fff;
   padding: 15px 10px;
   font-size: 18px;
+}
+
+main .wrap-feedback .feedback form .inputs .input-item p input.error {
+  border: 1px solid red;
 }
 
 main .wrap-feedback .feedback form .send {
@@ -1455,17 +1465,18 @@ main .quality {
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 main .quality .left {
-  width: -webkit-calc(58.33333% - 0px);
-  width: calc(58.33333% - 0px);
+  width: -webkit-calc(54.16667% - 0px);
+  width: calc(54.16667% - 0px);
   margin-bottom: 15px;
 }
 
@@ -1615,6 +1626,7 @@ footer .bottom a i {
 }
 
 .wrap-gift .gift {
+  padding: 30px;
   color: #fff;
   margin: auto;
   position: fixed;
@@ -1727,12 +1739,22 @@ footer .bottom a i {
     font-size: 10px;
   }
 
+  main .wrap-slider .topband nav {
+    width: -webkit-calc(73.33333% - 0px);
+    width: calc(73.33333% - 0px);
+  }
+
   main .wrap-slider .topband nav ul li {
     margin-left: 2px;
   }
 
   main .wrap-slider .topband nav ul li {
     margin-right: 2px;
+  }
+
+  main .wrapper-advantages-items .advantages-items .item {
+    width: -webkit-calc(45.83333% - 0px);
+    width: calc(45.83333% - 0px);
   }
 
   main .bigband .center {
@@ -1745,8 +1767,8 @@ footer .bottom a i {
     width: calc(41.66667% - 0px);
   }
 
-  main .wrap-feedback .feedback form .inputs .input-item {
-    margin: auto;
+  main .wrap-feedback .feedback .title {
+    font-size: 32px;
   }
 }
 
@@ -1781,6 +1803,13 @@ footer .bottom a i {
   main .advantages .items .item {
     width: -webkit-calc(83.33333% - 0px);
     width: calc(83.33333% - 0px);
+  }
+
+  main .wrap-slider .topband nav ul {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   main .thebest .images {
@@ -1837,11 +1866,6 @@ footer .bottom a i {
     width: calc(83.33333% - 0px);
   }
 
-  main .wrapper-advantages-items .advantages-items .item {
-    width: -webkit-calc(45.83333% - 0px);
-    width: calc(45.83333% - 0px);
-  }
-
   main .bigband .center {
     width: -webkit-calc(50% - 0px);
     width: calc(50% - 0px);
@@ -1850,6 +1874,26 @@ footer .bottom a i {
   main .hrbigband {
     width: -webkit-calc(45.83333% - 0px);
     width: calc(45.83333% - 0px);
+  }
+
+  main .wrap-feedback .feedback .title {
+    font-size: 25px;
+  }
+
+  main .wrap-feedback .feedback form .inputs {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  main .wrap-feedback .feedback form .inputs .input-item {
+    width: -webkit-calc(83.33333% - 0px);
+    width: calc(83.33333% - 0px);
+  }
+
+  main .wrap-feedback .feedback form .inputs .input-item {
+    margin-bottom: 15px;
   }
 
   main .quality {
@@ -1885,11 +1929,6 @@ footer .bottom a i {
   main .hrbigband {
     width: -webkit-calc(62.5% - 0px);
     width: calc(62.5% - 0px);
-  }
-
-  main .wrap-feedback .feedback form .inputs .input-item {
-    width: -webkit-calc(83.33333% - 0px);
-    width: calc(83.33333% - 0px);
   }
 
   main .wrap-feedback .feedback form .send {
